@@ -29,6 +29,9 @@ int main()
     cout << "Width: " << width << '\n';
     cout << "Height: " << height << '\n';
     cout << "Channels: " << channels << '\n';
-
+    cout << "First pixel: "
+     << (int)image[0] << ", "
+     << (int)image[1] << ", "
+     << (int)image[2] << '\n';
     stbi_image_free(image);
 }
