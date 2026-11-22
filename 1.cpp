@@ -26,12 +26,10 @@ int main()
         return 1;
     }
 
-    cout << "Width: " << width << '\n';
-    cout << "Height: " << height << '\n';
-    cout << "Channels: " << channels << '\n';
-    cout << "First pixel: "
-     << (int)image[0] << ", "
-     << (int)image[1] << ", "
-     << (int)image[2] << '\n';
+    cout << "output RGB of (10,20) pixel" << endl;
+    cout << "Red:" <<(int)image[(20*width + 10) * channels] << endl;
+    cout << "Green:" <<(int)image[(20*width + 10) * channels + 1] << endl;
+    cout << "Blue:" <<(int)image[(20*width + 10) * channels + 2] << endl;
+
     stbi_image_free(image);
 }
