@@ -26,10 +26,27 @@ int main()
         return 1;
     }
 
-    cout << "output RGB of (10,20) pixel" << endl;
-    cout << "Red:" <<(int)image[(20*width + 10) * channels] << endl;
-    cout << "Green:" <<(int)image[(20*width + 10) * channels + 1] << endl;
-    cout << "Blue:" <<(int)image[(20*width + 10) * channels + 2] << endl;
+    for (int y = 0; y < height; y++)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            int index = (y * width + x) * channels;
 
+            unsigned char gray = static_cast<unsigned char>(
+                0.299 * image[index] +
+                0.587 * image[index + 1] +
+                0.114 * image[index + 2]
+            );
+
+            image[index] = gray;
+            image[index + 1] = gray;
+            image[index + 2] = gray;
+        }
+    }
+
+    if(stbi_write_jpg("assets/grayscale.jpg", width, height, channels, image, 100) == 0)
+    {
+        cout << "Error: image aint got saved" << endl;
+    }
     stbi_image_free(image);
 }
