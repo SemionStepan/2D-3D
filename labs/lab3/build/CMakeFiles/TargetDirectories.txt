@@ -1,0 +1,3 @@
+C:/Users/Genji/Documents/Homework/3/2D/labs/lab3/build/CMakeFiles/lab3.dir
+C:/Users/Genji/Documents/Homework/3/2D/labs/lab3/build/CMakeFiles/edit_cache.dir
+C:/Users/Genji/Documents/Homework/3/2D/labs/lab3/build/CMakeFiles/rebuild_cache.dir
